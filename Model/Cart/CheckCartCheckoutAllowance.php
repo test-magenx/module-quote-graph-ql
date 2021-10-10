@@ -39,7 +39,7 @@ class CheckCartCheckoutAllowance
      */
     public function execute(Quote $quote): void
     {
-        if (!$quote->getCustomerIsGuest()) {
+        if (false === $quote->getCustomerIsGuest()) {
             return;
         }
 

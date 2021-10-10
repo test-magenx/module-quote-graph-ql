@@ -58,7 +58,6 @@ class CartItemPrices implements ResolverInterface
         $currencyCode = $cartItem->getQuote()->getQuoteCurrencyCode();
 
         return [
-            'model' => $cartItem,
             'price' => [
                 'currency' => $currencyCode,
                 'value' => $cartItem->getCalculationPrice(),
